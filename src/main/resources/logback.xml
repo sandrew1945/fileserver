@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <property name="LOG_PATH" value="/Users/summer/Documents/LocalFilePath/logs/zkac"/>
+    <property name="MAX_HISTORY" value="10"/>
+    <property name="SIZE_CAP" value="10MB"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <appender name="SAVE-TO-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/zkac.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M - %msg%n</Pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/archived/zkac_%d{dd-MM-yyyy}.log</fileNamePattern>
+            <maxHistory>${MAX_HISTORY}</maxHistory>
+            <totalSizeCap>${SIZE_CAP}</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="SAVE-TO-FILE" />
+    </root>
+
+    <logger name="com.sandrew.fileserver" additivity="false" level="debug">
+        <appender-ref ref="STDOUT" />
+        <!--<appender-ref ref="SAVE-TO-FILE" />-->
+    </logger>
+</configuration>

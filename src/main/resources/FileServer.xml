@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileServer>
+	<ServerConfig>
+		<host>118.190.158.35</host>
+		<port>27051</port>
+		<username>ftp</username>
+		<password>3f7e7fed558b0278</password>
+	</ServerConfig>
+	<Nodes>
+		<Node id="node01" role="R|W">
+			<FileRoot>/node01</FileRoot>
+		</Node>
+		<Node id="node02" role="R|W">
+			<FileRoot>/node02</FileRoot>
+		</Node>
+	</Nodes>
+</FileServer>
