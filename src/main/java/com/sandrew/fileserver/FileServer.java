@@ -184,20 +184,6 @@ public class FileServer
 		return null;
 	}
 
-//	public String upload(String address, int port, String user, String password, String relativePath, File file) throws FileServerException
-//	{
-//		// 根据nodeId获取远程路径
-//		String remoteFileName = FileUtil.fileNameMaker(nodeInfo.getId(), file.getName());
-//		String remoteCompletePath = nodeInfo.getFileRoot() + Constants.FILE_SEPARATOR + remoteFileName;
-//		connent();
-//		boolean isUpload = manager.upload(file, relativePath, "nginx.conf");
-//		if(isUpload)
-//		{
-//			return remoteCompletePath;
-//		}
-//		return null;
-//	}
-
 	/**
 	 * 
 	 * Function    : 下载远程文件

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FileServer>
 	<ServerConfig>
-		<host>118.190.158.35</host>
+		<host>192.190.158.35</host>
 		<port>27051</port>
 		<username>ftp</username>
 		<password>3f7e7fed558b0278</password>

@@ -41,7 +41,7 @@ public class UploadTest extends TestCase
 		try
 		{
 			AbstractManager manager = new FTPManager();
-			manager.open("118.190.158.35", 27051, "ftp", "123456");
+			manager.open("192.190.158.35", 27051, "ftp", "123456");
 			boolean isupload = manager.upload(new File("/Users/summer/Desktop/nginx.conf"), "node1", "nginx.conf");
 			log.debug("" + isupload);
 		}

@@ -38,7 +38,7 @@ public class DownloadTest extends TestCase
 		try
 		{
 			AbstractManager manager = new FTPManager();
-			manager.open("118.190.158.35", 27051, "develop", "123456");
+			manager.open("192.190.158.35", 27051, "develop", "123456");
 			byte[] bytes = manager.download("/a/b/c/d", "car.rar");
 			manager.close();
 			System.out.println("bytes =======" + bytes.length);
