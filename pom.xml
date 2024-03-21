@@ -97,4 +97,16 @@
 			<url>http://118.190.158.35:55011/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
+
+	<build>
+		<finalName>fileserver</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<excludes>
+					<exclude>**/*.xml</exclude>
+				</excludes>
+			</resource>
+		</resources>
+	</build>
 </project>
